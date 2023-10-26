@@ -14,6 +14,7 @@ import com.example.world.entity.Country;
 @RequestMapping("/countries")
 @CrossOrigin
 @Validated
+@Adapter
 public class WorldController {
 	private final CountryDao countryDao;
 	
