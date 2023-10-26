@@ -2,6 +2,7 @@ package com.example.service.impl;
 
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
@@ -15,22 +16,23 @@ import com.example.service.Calculator;
  */
 @Service
 @Lazy
+@Profile(TimeUnit.MILLISECONDS)
 public class SimpleCalculator implements Calculator {
 
 	@Override
-	@Profile(TimeUnit.MILLISECONDS)
 	public double add(double x, double y) {
 		return x + y;
 	}
 
 	@Override
-	@Profile(TimeUnit.MICROSECONDS)
+	//@Profile(TimeUnit.MICROSECONDS)
+	@Cacheable(cacheNames = "ints")
 	public double sub(double x, double y) {
 		return x - y;
 	}
 
 	@Override
-	@Profile(TimeUnit.NANOSECONDS)
+	//@Profile(TimeUnit.NANOSECONDS)
 	public double mul(double x, double y) {
 		return x * y;
 	}
