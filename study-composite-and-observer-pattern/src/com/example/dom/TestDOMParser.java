@@ -72,11 +72,12 @@ public class TestDOMParser {
                 System.out.println("There are "+histogram[i]+" movies "+range[i]);
             }
         } catch (Exception e) {
+        	System.err.println(e.getMessage());
         }
     }
 
     public static void main(String[] args) {
         TestDOMParser query = new TestDOMParser();
-        query.doQuery("src/data/movies.xml", "src/data/movies_of_70s.xml", "The");
+        query.doQuery("resources/movies.xml", "resources/movies_of_70s.xml", "The");
     }
 }
