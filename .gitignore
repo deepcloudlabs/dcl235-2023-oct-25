@@ -7,8 +7,9 @@
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Eclipse
+.metadata/
+bin/
 
 # Package Files #
 *.jar
