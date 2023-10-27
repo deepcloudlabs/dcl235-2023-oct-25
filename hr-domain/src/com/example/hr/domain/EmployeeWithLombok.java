@@ -10,7 +10,7 @@ import lombok.ToString;
 
 
 @DomainEntity(identity = { "identity" })
-@Builder
+@Builder()
 @Getter
 @Setter
 @EqualsAndHashCode(of="identity")
@@ -25,6 +25,7 @@ public class EmployeeWithLombok {
 	private Photo photo;
 	private BirthYear birthYear;
 	private String email;
+	private String sms;
 	
 	public Money increaseSalary(double rate) {
 		this.salary = this.salary.multiply(1.0 + rate/100.);

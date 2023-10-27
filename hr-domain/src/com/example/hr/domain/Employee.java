@@ -187,7 +187,7 @@ public class Employee {
 			// Business Rule
 			// Invariants
 			// Constraint
-			// Validation
+			// Validation Rule
 			return new Employee(this);
 		}
 	}
