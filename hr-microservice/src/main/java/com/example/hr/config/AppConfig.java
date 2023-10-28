@@ -13,7 +13,7 @@ import com.example.hr.repository.EmployeeRepository;
 public class AppConfig {
 
 	@Bean
-	public HrApplication createHrApplication(
+	HrApplication createHrApplication(
 			EmployeeRepository employeeRepository,EventPublisher<HrEvent> eventPublisher) {
 		return new StandardHrApplication(employeeRepository, eventPublisher);
 	}
