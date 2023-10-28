@@ -6,14 +6,13 @@ import java.util.logging.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.stereotype.Component;
 
 /**
  * 
  * @author Binnur Kurt <binnur.kurt@gmail.com>
  *
  */
-@Component
+@Bilesen
 @Aspect
 public class ProfileAspect {
 	private static Logger logger = Logger.getLogger(ProfileAspect.class.getName());

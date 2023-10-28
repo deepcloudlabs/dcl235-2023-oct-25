@@ -18,7 +18,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class HrEventWebSocketService implements WebSocketHandler {
-	private final Map<String,WebSocketSession> sessions = new ConcurrentHashMap<>();
+	private final Map<String,WebSocketSession> sessions = new ConcurrentHashMap<>(); 
+			 // Collections.synchronizedMap(new HashMap<>());
 	private final ObjectMapper objectMapper;
 	
 	public HrEventWebSocketService(ObjectMapper objectMapper) {
