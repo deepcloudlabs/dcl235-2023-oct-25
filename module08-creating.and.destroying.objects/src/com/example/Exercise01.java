@@ -35,7 +35,6 @@ class A {
 class B {
 }
 
-@SuppressWarnings("unused")
 enum C {
 	C1(1);
 
