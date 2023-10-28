@@ -106,7 +106,7 @@ public class ModelMapperConfig {
 	
 
 	@Bean
-	public ModelMapper createModelMapper() {
+	ModelMapper createModelMapper() {
 		var modelMapper = new ModelMapper();
 		modelMapper.addConverter(EMPLOYEE_TO_EMPLOYEE_RESPONSE_CONVERTER, Employee.class, EmployeeResponse.class);
 		modelMapper.addConverter(HIRE_EMPLOYEE_REQUEST_TO_EMPLOYEE_CONVERTER, HireEmployeeRequest.class, Employee.class);
